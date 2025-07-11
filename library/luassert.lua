@@ -12,6 +12,7 @@ local luassert = {}
 ---@param value any The value to confirm is `true`.
 function internal.True(value) end
 
+internal.not_true = internal.True
 internal.is_true = internal.True
 internal.is_not_true = internal.True
 
@@ -19,6 +20,7 @@ internal.is_not_true = internal.True
 ---@param value any The value to confirm is `false`.
 function internal.False(value) end
 
+internal.not_false = internal.False
 internal.is_false = internal.False
 internal.is_not_false = internal.False
 
@@ -27,6 +29,7 @@ internal.is_not_false = internal.False
 function internal.Boolean(value) end
 
 internal.boolean = internal.Boolean
+internal.not_boolean = internal.Boolean
 internal.is_boolean = internal.Boolean
 internal.is_not_boolean = internal.Boolean
 
@@ -34,6 +37,7 @@ internal.is_not_boolean = internal.Boolean
 ---@param value any The value to confirm is of type `number`.
 function internal.Number(value) end
 
+internal.not_number = internal.Number
 internal.number = internal.Number
 internal.is_number = internal.Number
 internal.is_not_number = internal.Number
@@ -42,6 +46,7 @@ internal.is_not_number = internal.Number
 ---@param value any The value to confirm is of type `string`.
 function internal.String(value) end
 
+internal.not_string = internal.String
 internal.string = internal.String
 internal.is_string = internal.String
 internal.is_not_string = internal.String
@@ -50,6 +55,7 @@ internal.is_not_string = internal.String
 ---@param value any The value to confirm is of type `table`.
 function internal.Table(value) end
 
+internal.not_table = internal.Table
 internal.table = internal.Table
 internal.is_table = internal.Table
 internal.is_not_table = internal.Table
@@ -58,6 +64,7 @@ internal.is_not_table = internal.Table
 ---@param value any The value to confirm is of type `nil`.
 function internal.Nil(value) end
 
+internal.not_nil = internal.Nil
 internal.is_nil = internal.Nil
 internal.is_not_nil = internal.Nil
 
@@ -65,6 +72,7 @@ internal.is_not_nil = internal.Nil
 ---@param value any The value to confirm is of type `userdata`.
 function internal.Userdata(value) end
 
+internal.not_userdata = internal.Userdata
 internal.userdata = internal.Userdata
 internal.is_userdata = internal.Userdata
 internal.is_not_userdata = internal.Userdata
@@ -73,6 +81,7 @@ internal.is_not_userdata = internal.Userdata
 ---@param value any The value to confirm is of type `function`.
 function internal.Function(value) end
 
+internal.not_function = internal.Function
 internal.is_function = internal.Function
 internal.is_not_function = internal.Function
 
@@ -81,6 +90,7 @@ internal.is_not_function = internal.Function
 function internal.Thread(value) end
 
 internal.thread = internal.Thread
+internal.not_thread = internal.Thread
 internal.is_thread = internal.Thread
 internal.is_not_thread = internal.Thread
 
@@ -89,6 +99,7 @@ internal.is_not_thread = internal.Thread
 function internal.truthy(value) end
 
 internal.Truthy = internal.truthy
+internal.not_truthy = internal.truthy
 internal.is_truthy = internal.truthy
 internal.is_not_truthy = internal.truthy
 
@@ -97,6 +108,7 @@ internal.is_not_truthy = internal.truthy
 function internal.falsy(value) end
 
 internal.Falsy = internal.falsy
+internal.not_falsy = internal.falsy
 internal.is_falsy = internal.falsy
 internal.is_not_falsy = internal.falsy
 
@@ -137,9 +149,11 @@ internal.has_no_error = internal.error
 function internal.matches(pattern, actual, init, plain) end
 
 internal.is_matches = internal.matches
+internal.not_matches = internal.matches
 internal.is_not_matches = internal.matches
 
 internal.match = internal.matches
+internal.not_match = internal.matches
 internal.is_match = internal.matches
 internal.is_not_match = internal.matches
 
@@ -166,6 +180,7 @@ internal.is_not_match = internal.matches
 function internal.near(expected, actual, tolerance) end
 
 internal.Near = internal.near
+internal.not_near = internal.near
 internal.is_near = internal.near
 internal.is_not_near = internal.near
 
@@ -177,6 +192,7 @@ internal.is_not_near = internal.near
 function internal.equal(expected, ...) end
 
 internal.Equal = internal.equal
+internal.not_equal = internal.equal
 internal.are_equal = internal.equal
 internal.are_not_equal = internal.equal
 
@@ -188,6 +204,7 @@ internal.are_not_equal = internal.equal
 function internal.same(expected, ...) end
 
 internal.Same = internal.same
+internal.not_same = internal.same
 internal.are_same = internal.same
 internal.are_not_same = internal.same
 
@@ -264,6 +281,7 @@ internal.are_not_all_near = internal.all_near
 function internal.unique(arr) end
 
 internal.is_unique = internal.unique
+internal.not_unique = internal.unique
 internal.is_not_unique = internal.unique
 
 --#endregion
