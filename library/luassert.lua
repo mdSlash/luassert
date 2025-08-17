@@ -115,7 +115,7 @@ internal.is_not_falsy = internal.falsy
 ---Assert that a callback throws an error.
 ---@param callback function A callback function that should error
 ---@param error? string The specific error message that will be asserted
----@param msg? string A custom message for the assertion failure
+---@param msg? string The failure message
 function internal.error(callback, error, msg) end
 
 internal.Error = internal.error
