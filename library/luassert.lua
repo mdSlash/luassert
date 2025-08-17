@@ -197,7 +197,7 @@ internal.not_equal = internal.equal
 internal.are_equal = internal.equal
 internal.are_not_equal = internal.equal
 
----Check that two values are considered "the same".
+---Check that two values are considered the "same".
 ---
 ---When comparing tables, a deep compare will be performed.
 ---@param expected any The expected value
