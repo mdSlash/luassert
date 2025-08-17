@@ -185,12 +185,13 @@ internal.not_near = internal.near
 internal.is_near = internal.near
 internal.is_not_near = internal.near
 
----Check that two or more items are equal.
+---Check that two items are equal.
 ---
 ---When comparing tables, a reference check will be used.
 ---@param expected any The expected value
----@param ... any Values to check the equality of
-function internal.equal(expected, ...) end
+---@param actual any The actual value to check
+---@param msg? string The failure message
+function internal.equal(expected, actual, msg) end
 
 internal.Equal = internal.equal
 internal.not_equal = internal.equal
